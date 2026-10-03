@@ -52,7 +52,9 @@ export default function ChatHeader({ conversation, onOpenPinned, onOpenFiles, on
   return (
     <header className="chat-header">
       <div className="chat-header__info">
-        <button className="btn-icon" style={{ display: 'none' }} onClick={onBack}><ArrowLeft size={18} /></button>
+        <button className="btn-icon chat-header__back" onClick={onBack} title="Back to conversations">
+          <ArrowLeft size={18} />
+        </button>
         {isDirect ? <UserAvatar user={peer} size={40} showStatus /> : (
           <div className="avatar" style={{ width: 40, height: 40, background: 'var(--color-primary)', color: '#fff' }}>
             <div className="avatar__fallback" style={{ fontWeight: 700 }}>{conversation.type === 'team' ? '🏢' : (name || 'T').charAt(0)}</div>

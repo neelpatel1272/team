@@ -87,20 +87,20 @@ export default function Dashboard() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Teams Workspace Hub" />
-      <div style={{ padding: 28, overflowY: 'auto', flex: 1 }}>
+      <div className="page-container">
         <div className="teams-welcome-banner" style={{ marginBottom: 24 }}>
           <h1 style={{ margin: '0 0 6px', fontSize: 24, fontWeight: 700 }}>{greeting()}, {user?.firstName || 'there'} 👋</h1>
           <p className="muted" style={{ margin: 0, fontSize: 14 }}>Welcome back to Microsoft Teams. Here is your workspace activity overview.</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: 16, marginBottom: 28 }}>
+        <div className="dashboard-stats-grid">
           <StatCard icon={<MessageCircle size={20} color="var(--color-primary)" />} value={unreadTotal} label="Unread Messages" onClick={() => navigate('/chat')} />
           <StatCard icon={<Users size={20} color="var(--color-success)" />} value={onlineCount} label="Available Online" onClick={() => setTeamTab('online')} />
           <StatCard icon={<PhoneMissed size={20} color="var(--color-danger)" />} value={missedCalls.length} label="Missed Calls" onClick={() => navigate('/calls')} />
           <StatCard icon={<Folder size={20} color="var(--color-primary)" />} value={conversations.length} label="Active Channels" onClick={() => navigate('/files')} />
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: 20 }}>
+        <div className="dashboard-columns-grid">
           <div className="card" style={{ padding: 20 }}>
             <div className="flex items-center justify-between" style={{ marginBottom: 14 }}>
               <div className="flex items-center gap-2">

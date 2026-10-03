@@ -80,12 +80,6 @@ export default function Login() {
           Create an account
         </Link>
       </p>
-
-      <div className="card" style={{ marginTop: 20, padding: 14, background: 'var(--color-surface-alt)' }}>
-        <div className="text-sm font-bold" style={{ marginBottom: 4 }}>Try a demo account</div>
-        <div className="text-sm muted">john@workwave.demo / Password123!</div>
-        <div className="text-sm muted">sarah@workwave.demo / Password123!</div>
-      </div>
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function Files() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Files" />
-      <div style={{ padding: 28, overflowY: 'auto', flex: 1 }}>
+      <div className="page-container">
         <div className="flex items-center justify-between gap-2" style={{ marginBottom: 20, flexWrap: 'wrap' }}>
           <div className="flex gap-2">
             {FILTERS.map(({ key, label, icon: Icon }) => (

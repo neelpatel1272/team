@@ -22,14 +22,13 @@ export default function Settings() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Settings" />
-      <div className="flex" style={{ flex: 1, overflow: 'hidden' }}>
-        <div style={{ width: 220, borderRight: '1px solid var(--color-border)', padding: 16, flexShrink: 0 }}>
+      <div className="settings-layout">
+        <div className="settings-nav">
           {TABS.map(({ key, label, icon: Icon }) => (
             <button
               key={key}
-              className={`btn-ghost flex items-center gap-2 text-sm`}
+              className={`btn-ghost flex items-center gap-2 text-sm settings-nav__item`}
               style={{
-                width: '100%', justifyContent: 'flex-start', padding: 10, marginBottom: 4, borderRadius: 10,
                 background: tab === key ? 'var(--color-surface-alt)' : 'transparent',
                 color: tab === key ? 'var(--color-text)' : 'var(--color-text-muted)',
                 fontWeight: tab === key ? 600 : 500,
@@ -41,7 +40,7 @@ export default function Settings() {
           ))}
         </div>
 
-        <div style={{ flex: 1, padding: 28, overflowY: 'auto', maxWidth: 620 }}>
+        <div className="settings-content">
           {tab === 'account' && <AccountTab user={user} />}
           {tab === 'notifications' && <NotificationsTab />}
           {tab === 'appearance' && <AppearanceTab />}

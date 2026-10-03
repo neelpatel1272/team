@@ -54,7 +54,7 @@ export default function Teams() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Teams & Channels" />
-      <div style={{ padding: 28, overflowY: 'auto', flex: 1 }}>
+      <div className="page-container">
         <div className="flex items-center justify-between" style={{ marginBottom: 20 }}>
           <div>
             <h2 style={{ margin: '0 0 4px', fontSize: 20, fontWeight: 700 }}>Team Workspaces</h2>

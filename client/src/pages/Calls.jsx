@@ -39,8 +39,8 @@ export default function Calls() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Calls" />
-      <div style={{ padding: 28, overflowY: 'auto', flex: 1 }}>
-        <div className="flex gap-2" style={{ marginBottom: 20 }}>
+      <div className="page-container">
+        <div className="flex gap-2" style={{ marginBottom: 20, flexWrap: 'wrap' }}>
           {FILTERS.map((f) => (
             <button key={f} className={`btn text-sm ${filter === f ? 'btn-primary' : 'btn-outline'}`} onClick={() => setFilter(f)} style={{ textTransform: 'capitalize' }}>
               {f}

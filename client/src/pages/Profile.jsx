@@ -37,7 +37,7 @@ export default function Profile() {
   return (
     <div className="main-pane" style={{ width: '100%' }}>
       <Topbar title="Profile" />
-      <div style={{ padding: 28, overflowY: 'auto', flex: 1, maxWidth: 640 }}>
+      <div className="page-container" style={{ maxWidth: 720 }}>
         <div className="card" style={{ padding: 28 }}>
           <div className="flex items-center gap-4" style={{ marginBottom: 24 }}>
             <UserAvatar user={user} size={84} showStatus />
