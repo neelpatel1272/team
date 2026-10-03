@@ -42,29 +42,29 @@ export default function Register() {
       <p className="muted text-sm" style={{ marginBottom: 20 }}>Join your team on WorkWave.</p>
 
       <form onSubmit={onSubmit}>
-        <div className="flex gap-2">
-          <div className="field" style={{ flex: 1 }}>
-            <label>First name</label>
-            <input name="firstName" className="input" value={form.firstName} onChange={onChange} required />
+        <div className="form-row-2">
+          <div className="field">
+            <label>First name <span style={{ color: 'var(--color-danger)' }}>*</span></label>
+            <input name="firstName" className="input" value={form.firstName} onChange={onChange} placeholder="Jane" required />
           </div>
-          <div className="field" style={{ flex: 1 }}>
-            <label>Last name</label>
-            <input name="lastName" className="input" value={form.lastName} onChange={onChange} required />
+          <div className="field">
+            <label>Last name <span style={{ color: 'var(--color-danger)' }}>*</span></label>
+            <input name="lastName" className="input" value={form.lastName} onChange={onChange} placeholder="Doe" required />
           </div>
         </div>
 
         <div className="field">
-          <label>Work email</label>
-          <input name="email" type="email" className="input" value={form.email} onChange={onChange} required />
+          <label>Work email <span style={{ color: 'var(--color-danger)' }}>*</span></label>
+          <input name="email" type="email" className="input" value={form.email} onChange={onChange} placeholder="jane.doe@company.com" required />
         </div>
 
         <div className="field">
-          <label>Password</label>
-          <input name="password" type="password" className="input" value={form.password} onChange={onChange} minLength={8} required />
+          <label>Password <span style={{ color: 'var(--color-danger)' }}>*</span></label>
+          <input name="password" type="password" className="input" value={form.password} onChange={onChange} placeholder="At least 8 characters" minLength={8} required />
         </div>
 
-        <div className="flex gap-2">
-          <div className="field" style={{ flex: 1 }}>
+        <div className="form-row-2">
+          <div className="field">
             <label>Department</label>
             <select name="department" className="input" value={form.department} onChange={onChange}>
               {DEPARTMENTS.map((d) => (
@@ -72,7 +72,7 @@ export default function Register() {
               ))}
             </select>
           </div>
-          <div className="field" style={{ flex: 1 }}>
+          <div className="field">
             <label>Job title</label>
             <input name="jobTitle" className="input" value={form.jobTitle} onChange={onChange} placeholder="e.g. Product Designer" />
           </div>
